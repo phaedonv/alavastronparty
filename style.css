@@ -5,3 +5,8 @@
     height: 210mm;
     width: 148.5mm;
 }
+
+#poster-div {
+    display: flex;
+    flex-direction: column;
+}
