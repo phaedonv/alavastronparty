@@ -1,16 +1,19 @@
-function createPoster() {
-    for(let i = 0; i < 100; i++) {
-        const img = document.createElement("img");
-        img.src = "https://picsum.photos/200/301?id=" + i;
-        if(i === 5) {
-          img.style.borderRadius = "50%";
-        }
-        img.classList.add("img-class");
-        img.id = "poster";
-        document.body.appendChild(img);
-      }
-}
+posterData = [{
+    "id" : 1,
+    "image" : "https://res.cloudinary.com/thisisnotanimage/image/upload/v1613122599/4zbqeaavod7ozfaebl0no3ci29ys.png"
+}, {
+    "id" : 2,
+    "image" : "https://res.cloudinary.com/thisisnotanimage/image/upload/v1621354287/logo1_n4on1d.png"
+}]
 
-createPoster();
+posterData.forEach(function createPoster(obj) {
+    const img = document.createElement("img");
+    img.src = obj.image;
+    
+    img.classList.add("img-class");
+    img.id = "poster";
+
+    document.body.appendChild(img);
+});
 
 
