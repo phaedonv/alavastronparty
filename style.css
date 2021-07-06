@@ -1,12 +1,40 @@
+#album {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 #poster {
+    opacity: 0.6;
     margin: 23px;
 
-    /* A5 dimensions */
-    height: 210mm;
-    width: 148.5mm;
+/* A6 dimensions 
+    height: 105mm;
+    width: 74mm;
+*/
+
+    width: 24vw;
+    height: 55vh;
+}
+
+#poster:hover {
+    opacity: 1;
 }
 
 #poster-div {
-    display: flex;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+}
+
+#link {
+    padding: 12px;
+    text-decoration: none;
+    text-align: center;
+
+    border: black 1.5px solid;
+    border-radius: 6px;
 }
