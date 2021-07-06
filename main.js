@@ -5,7 +5,8 @@ function createPoster() {
         if(i === 5) {
           img.style.borderRadius = "50%";
         }
-        img.classList.add("img-margin");
+        img.classList.add("img-class");
+        img.id = "poster";
         document.body.appendChild(img);
       }
 }
