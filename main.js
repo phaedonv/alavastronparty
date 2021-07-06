@@ -13,7 +13,7 @@ posterData.forEach(function createPoster(obj) {
     img.classList.add("img-class");
     img.id = "poster";
 
-    document.body.appendChild(img);
+    document.getElementById("poster-div").appendChild(img);
 });
 
 
