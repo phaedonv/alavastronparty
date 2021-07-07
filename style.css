@@ -24,7 +24,9 @@
     */
     width: 22vw;
     height: 42vh;
-    object-fit: contain;
+    object-fit: cover;
+    border: 1px #d424cf solid;
+    border-radius: 10px;
 }
 
 #poster:hover {
