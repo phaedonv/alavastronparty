@@ -489,9 +489,14 @@ posterData.forEach(function(obj) {
     */
 
     let card = document.createElement("div");
-    card.innerHTML = `<img src="https://res.cloudinary.com/thisisnotanimage/image/upload/fl_attachment:poster/f_auto,q_auto/${obj.picture}" loading="lazy" id="poster">
+    card.innerHTML = `<img class="lozad" data-src="https://res.cloudinary.com/thisisnotanimage/image/upload/fl_attachment:poster/f_auto,q_auto/${obj.picture}" id="poster">
                     <a id="link" href="https://res.cloudinary.com/thisisnotanimage/image/upload/fl_attachment:poster/${obj.picture}">download image</a>`   
 
     document.getElementById("album").appendChild(card);
     card.id = "poster-div";
 });
+
+
+//lozad image lazy loading
+const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
