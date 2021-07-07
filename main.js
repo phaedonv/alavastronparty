@@ -474,6 +474,8 @@ posterData = [{
     "picture" : "v1625591903/Alavastron%20posters/1SEEfire_rakwtb.png"
 }]
 
+
+
 posterData.forEach(function(obj) {
     /*
     //create image tag with poster preview
@@ -491,8 +493,16 @@ posterData.forEach(function(obj) {
     this.document.getElementById("poster-div").appendChild(btn);    
     */
 
+    let mod4l = document.getElementById("myModal");
+    mod4l.innerHTML = `<span class="close">×</span>
+    <img class="modal-content" id="img01" data-src="https://res.cloudinary.com/thisisnotanimage/image/upload/fl_attachment:poster/f_auto,q_auto/${obj.picture}">
+    <div id="caption"></div>`
+    //document.getElementById("album").appendChild(mod4l);
+    //mod4l.id = "myModal";
+    //mod4l.classList.add("modal");
+
     let card = document.createElement("div");
-    card.innerHTML = `<img class="lozad" data-src="https://res.cloudinary.com/thisisnotanimage/image/upload/fl_attachment:poster/f_auto,q_auto/${obj.picture}" id="poster">
+    card.innerHTML = `<img class="lozad" data-src="https://res.cloudinary.com/thisisnotanimage/image/upload/fl_attachment:poster/f_auto,q_auto/${obj.picture}" alt="${obj.id}" id="poster">
                     <a id="link" href="https://res.cloudinary.com/thisisnotanimage/image/upload/fl_attachment:poster/${obj.picture}">download image</a>`   
 
     document.getElementById("album").appendChild(card);
@@ -503,3 +513,38 @@ posterData.forEach(function(obj) {
 //lozad image lazy loading
 const observer = lozad(); // lazy loads elements with default selector as '.lozad'
 observer.observe();
+
+
+//modaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaal
+// Get the modal
+var modal = document.getElementById("myModal");
+    
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("poster");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+////////////////////////////////////////////////
+
+var images = document.querySelectorAll("#poster");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+for(let i = 0; i < images.length; i++){
+  images[i].onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+}
