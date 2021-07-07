@@ -126,7 +126,7 @@ posterData = [{
     "picture" : "v1625592060/Alavastron%20posters/sOUNDTRACK_PARTY_4_arcgsy.jpg"
 }, {
     "id" : 43,
-    "picture" : "v1621354287/logo1_n4on1d.png"
+    "picture" : "v1625592059/Alavastron%20posters/Soundtrack_vol_III_pd9n6q.jpg"
 }, {
     "id" : 44,
     "picture" : "v1621354287/logo1_n4on1d.png"
