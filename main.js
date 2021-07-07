@@ -29,7 +29,7 @@ posterData = [{
     "id" : 10,
     "picture" : "v1625592092/Alavastron%20posters/welcome_back_qqs4nz.jpg"
 }, {
-    "id" : 1,
+    "id" : 11,
     "picture" : "v1621354287/logo1_n4on1d.png"
 }, {
     "id" : 12,
@@ -489,7 +489,7 @@ posterData.forEach(function(obj) {
     */
 
     let card = document.createElement("div");
-    card.innerHTML = `<img src="https://res.cloudinary.com/thisisnotanimage/image/upload/fl_attachment:poster/${obj.picture}" id="poster">
+    card.innerHTML = `<img src="https://res.cloudinary.com/thisisnotanimage/image/upload/fl_attachment:poster/f_auto,q_auto/${obj.picture}" id="poster">
                     <a id="link" href="https://res.cloudinary.com/thisisnotanimage/image/upload/fl_attachment:poster/${obj.picture}">download image</a>`   
 
     document.getElementById("album").appendChild(card);
