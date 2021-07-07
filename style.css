@@ -1,3 +1,7 @@
+* {
+    background-color: #000000;
+}
+
 #album {
     display: flex;
     justify-content: center;
@@ -8,15 +12,19 @@
 
 #poster {
     opacity: 0.9;
-    margin: 23px;
+    margin: 0px;
 
-/* A6 dimensions 
+    /* A6 dimensions 
     height: 105mm;
     width: 74mm;
-*/
+
 
     width: 105mm;
     height: 148.5mm;
+    */
+    width: 22vw;
+    height: 42vh;
+    object-fit: contain;
 }
 
 #poster:hover {
@@ -28,13 +36,19 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    /*
+    border: 2px rgb(36, 36, 36) solid;
+    border-radius: 42px;
+    */
+    margin: 10px;
 }
 
 #link {
     padding: 12px;
     text-decoration: none;
     text-align: center;
-
+    margin-bottom: 42px;
     border: black 1.5px solid;
     border-radius: 6px;
 }
