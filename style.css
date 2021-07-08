@@ -2,6 +2,14 @@
     background-color: #000000;
 }
 
+#heading {
+  font-family: 'Zen Tokyo Zoo', cursive;
+  font-size: large;
+  color: #d014d6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 #album {
     display: flex;
     justify-content: center;
@@ -25,12 +33,17 @@
     width: 298px;
     height: 420px;
     object-fit: cover;
-    border: 1px #d424cf solid;
+    
+    border: 0.5px rgb(223 220 220 / 27%) solid;
     border-radius: 10px;
+    
 }
 
 #poster:hover {
     opacity: 1;
+    outline:none;
+    border-color:white;
+    box-shadow:0 0 10px white;
 }
 
 #poster-div {
@@ -48,11 +61,27 @@
 
 #link {
     padding: 12px;
+    letter-spacing: 6px;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Advent Pro', sans-serif;
     text-decoration: none;
     text-align: center;
+    text-transform: lowercase;
+    color: #f1f1f193;
     margin-bottom: 42px;
-    border: black 1.5px solid;
-    border-radius: 6px;
+    margin-top: 10px;
+
+    border: 0.5px rgb(223 220 220 / 27%) solid;
+    border-radius: 10px;
+}
+
+#link:hover {
+  opacity: 1;
+  outline:none;
+  border-color:white;
+  box-shadow:0 0 10px white;
+  color: #f1f1f1;
 }
 
 /************************************************************/

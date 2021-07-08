@@ -503,7 +503,7 @@ posterData.forEach(function(obj) {
 
     let card = document.createElement("div");
     card.innerHTML = `<img class="lozad" data-src="https://res.cloudinary.com/thisisnotanimage/image/upload/fl_attachment:poster/f_auto,q_auto/${obj.picture}" alt="${obj.id}" id="poster">
-                    <a id="link" href="https://res.cloudinary.com/thisisnotanimage/image/upload/fl_attachment:poster/${obj.picture}">download image</a>`   
+                    <a id="link" href="https://res.cloudinary.com/thisisnotanimage/image/upload/fl_attachment:poster/${obj.picture}">download<br>👇</a>`   
 
     document.getElementById("album").appendChild(card);
     card.id = "poster-div";
