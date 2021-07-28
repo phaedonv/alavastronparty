@@ -10,6 +10,8 @@
     <title>Alavastron Party Posters</title>
 
     <!--meta-tags-SEO-->
+    <meta property="og:url" content="https://alavastronpartyposters.com" />
+    <meta property="og:type" content="website" />
     <meta property="og:title" content="Cafe Bar Alavastron Greece Party Posters" />
     <meta property="og:description" content="View all the created Alavastron party posters and download 'em all!" />
     <meta property="og:image" content="https://res.cloudinary.com/thisisnotanimage/image/upload/v1627507531/alavastronpartyposters_wjxxu1.png" />
@@ -20,13 +22,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!--Include the JavaScript SDK on your page once, ideally right after the opening body tag.-->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0" nonce="SW3FJFpU"></script>
+    
     <h1 id="heading">Alavastron Party Posters</h1>
+    
+    <!--facebook buttons-->
+    <div class="container">
+        <!-- FB share button code -->
+        <div id="fbtn" class="fb-share-button" data-href="https://alavastronpartyposters.com/" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Falavastronpartyposters.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+        <br>
+        <!-- FB like button code -->
+        <div class="fb-like" 
+        data-href="https://www.facebook.com/alavastroncafe" 
+        data-width=""
+        data-layout="button" 
+        data-action="like" 
+        data-size="small"  
+        data-share="false">
+        </div>
+    </div>
 
     <div id="album">  </div>
 
     <div id="myModal" class="modal"></div>
 
 </body>
+
+<footer>
+    
+</footer>
 
 <script type="text/javascript" src="main.js"></script>
 

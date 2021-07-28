@@ -2,6 +2,14 @@
     background-color: #000000;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  
+  padding: 2vh;
+  flex-direction: column;
+}
+
 #heading {
   font-family: 'Zen Tokyo Zoo', cursive;
   font-size: 4vw;
@@ -9,6 +17,10 @@
   color: #d014d6;
   text-align: center;
   text-transform: uppercase;
+}
+
+#fbtn {
+  background-color: rgb(216, 12, 165);
 }
 
 #album {
