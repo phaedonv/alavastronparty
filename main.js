@@ -551,10 +551,30 @@ for(let i = 0; i < images.length; i++){
 
 
 //sweet alert
-
 Swal.fire({
     icon: 'success',
     title: 'Hooray!',
     text: 'Thank you for visiting. The webpage is still under construction!',
     //footer: '<a style="text-decoration:none;color:#2678C4;" href="https://github.com/phaedonv" target="_blank">Visit my github account!</a>'
   })
+
+//Back to the top button...
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
