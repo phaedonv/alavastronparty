@@ -548,3 +548,12 @@ for(let i = 0; i < images.length; i++){
     captionText.innerHTML = this.alt;
   }
 }
+
+
+//sweet alert
+Swal.fire({
+    icon: 'success',
+    title: 'Hooray!',
+    text: 'Thank you for visiting. The webpage is still under construction!',
+    //footer: '<a style="text-decoration:none;color:#2678C4;" href="https://github.com/phaedonv" target="_blank">Visit my github account!</a>'
+  })
