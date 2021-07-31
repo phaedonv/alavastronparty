@@ -551,6 +551,7 @@ for(let i = 0; i < images.length; i++){
 
 
 //sweet alert
+
 Swal.fire({
     icon: 'success',
     title: 'Hooray!',
