@@ -23,6 +23,12 @@
   background-color: rgb(216, 12, 165);
 }
 
+#info {
+  color:#d014d6;
+  font-size: large;
+  margin-top: 2vh;
+}
+
 #album {
     display: flex;
     justify-content: center;
