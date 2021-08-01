@@ -17,6 +17,9 @@ html {
   color: #d014d6;
   text-align: center;
   text-transform: uppercase;
+
+  z-index: 1;
+  position: sticky;
 }
 
 #logo {
