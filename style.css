@@ -46,6 +46,11 @@ html {
   z-index: 1;
 }
 
+#visitor {
+  color: aliceblue;
+  font-size: small;
+}
+
 #album {
     display: flex;
     justify-content: center;
