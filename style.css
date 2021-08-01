@@ -40,14 +40,23 @@ html {
     }
 }
 
+.container div {
+  margin: 2vh 0;
+  text-align: center;
+}
+
+#social {
+  display: flex;
+}
+
 #fbtn {
-  background-color: rgb(216, 12, 165);
+  border-radius: 20px;
 }
 
 #info {
   color:#d014d6;
   font-size: large;
-  margin-top: 2vh;
+  margin-top: 0vh;
 }
 
 .github-corner {
@@ -60,16 +69,12 @@ html {
 
 #vcount {
   color: #d014d6;
-  font-size: smaller;
+  font-size: medium;
   text-align: center;
-
-  position: fixed;
-  z-index: 1;
 }
 
 #visitor {
-  color: aliceblue;
-  font-size: small;
+  font-size: medium;
 }
 
 #album {
