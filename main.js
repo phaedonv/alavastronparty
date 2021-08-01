@@ -580,7 +580,7 @@ function topFunction() {
 }
 
 //visitor counter
-const countEl = document.getElementById('count');
+const countEl = document.getElementById('visitor');
 
 updateVisitCount();
 
