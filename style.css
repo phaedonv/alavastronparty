@@ -19,6 +19,27 @@ html {
   text-transform: uppercase;
 }
 
+.animetext {
+  animation: flow 2s infinite;
+  background: linear-gradient(to right, #45a3e5, #66bf39, #eb670f, #f35, #864cbf );
+  background-size: 150%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes flow {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
 #fbtn {
   background-color: rgb(216, 12, 165);
 }
