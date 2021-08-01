@@ -578,3 +578,16 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+//visitor counter
+const countEl = document.getElementById('count');
+
+updateVisitCount();
+
+function updateVisitCount() {
+	fetch('https://api.countapi.xyz/update/alavastronpartyposters.com/d7c6741e-916f-447e-a9fa-bf6a1063357f?amount=1')
+	.then(res => res.json())
+	.then(res => {
+		countEl.innerHTML = res.value;
+	})
+}

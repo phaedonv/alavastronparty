@@ -37,6 +37,15 @@ html {
   cursor: pointer;
 }
 
+#vcount {
+  color: #d014d6;
+  font-size: smaller;
+  text-align: center;
+
+  position: fixed;
+  z-index: 1;
+}
+
 #album {
     display: flex;
     justify-content: center;
