@@ -230,7 +230,7 @@ html {
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
-    z-index: 42;
+    z-index: 12 !important;
   }
   
   .close:hover,
@@ -271,7 +271,7 @@ html {
       top: 50px;
       right: 3vw !important;
 
-      z-index: 42;
+      z-index: 12 !important;
     }
   }
 
@@ -351,7 +351,7 @@ html {
   top: 2vh;
   left: 2vw;
 
-  z-index: 9;
+  z-index: 1;
 }
 
 /*input slider color change*/
