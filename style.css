@@ -264,6 +264,12 @@ html {
     #kit-player-one {
       position: sticky !important;
     }
+
+    .close {
+      position: absolute;
+      top: 50px;
+      right: 3vw !important;
+    }
   }
 
   /*back to top button CSS*/
