@@ -215,8 +215,8 @@ html {
   /* The Close Button */
   .close {
     position: absolute;
-    top: 15px;
-    right: 35px;
+    top: 50px;
+    right: 47vw;
     color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
@@ -233,7 +233,20 @@ html {
   /* 100% Image Width on Smaller Screens */
   @media only screen and (max-width: 700px){
     .modal-content {
-      width: 100%;
+      width: 94%;
+    }
+
+    #heading {
+      font-size: 4vh;
+      letter-spacing: 6px;
+
+      padding-top: 2rem;
+    }
+
+    #logo {
+      font-size: 3vh;
+      /* padding-top: 2vh; */
+      letter-spacing: 12px;
     }
   }
 
