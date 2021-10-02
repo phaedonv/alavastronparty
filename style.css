@@ -230,6 +230,7 @@ html {
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
+    z-index: 42;
   }
   
   .close:hover,
@@ -269,6 +270,8 @@ html {
       position: absolute;
       top: 50px;
       right: 3vw !important;
+
+      z-index: 42;
     }
   }
 
