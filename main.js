@@ -591,3 +591,37 @@ function updateVisitCount() {
 		countEl.innerHTML = res.value;
 	})
 }
+
+//volume of background music
+
+var kitRadio = document.getElementById("kit");
+kitRadio.volume = 0.6;
+
+
+/*another one play btn*/
+const kit = document.getElementById("kit");
+const box = document.querySelector('.box');
+
+function togglePlay() {
+  return kit.paused ? kit.play() : kit.pause();
+};
+
+box.addEventListener('click', (e)=>{
+  e.target.classList.toggle('pause');
+  togglePlay();
+})
+
+kit.onplaying = function() {
+    box.classList.add('pause');
+};
+
+//volume control
+var video = document.getElementById('kit');
+var volumeControl = document.getElementById('vol-control');
+
+var setVolume = function(){
+    video.volume = this.value / 200;
+};
+
+volumeControl.addEventListener('change',setVolume);
+volumeControl.addEventListener('input',setVolume);
