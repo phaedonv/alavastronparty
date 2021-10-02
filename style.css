@@ -264,6 +264,8 @@ html {
     }
     #kit-player-one {
       position: sticky !important;
+
+      z-index: 1 !important;
     }
 
     .close {
@@ -351,7 +353,7 @@ html {
   top: 2vh;
   left: 2vw;
 
-  z-index: 1;
+  z-index: 1 !important;
 }
 
 /*input slider color change*/
