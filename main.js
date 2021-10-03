@@ -514,6 +514,26 @@ posterData.forEach(function(obj) {
 const observer = lozad(); // lazy loads elements with default selector as '.lozad'
 observer.observe();
 
+// start radio on page load
+document.getElementById('kit').muted = false;
+function autoplay() {
+  document.getElementById('kit').play();
+}
+
+window.onload = autoplay();
+
+window.onload = function() {
+  var reloading = sessionStorage.getItem("reloading");
+  if (reloading) {
+      sessionStorage.removeItem("reloading");
+      autoplay();
+  }
+}
+
+function reloadP() {
+  sessionStorage.setItem("reloading", "true");
+  document.location.reload();
+}
 
 //modaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaal
 // Get the modal
@@ -625,3 +645,4 @@ var setVolume = function(){
 
 volumeControl.addEventListener('change',setVolume);
 volumeControl.addEventListener('input',setVolume);
+
