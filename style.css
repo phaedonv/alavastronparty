@@ -266,6 +266,8 @@ html {
       position: sticky !important;
 
       z-index: 1 !important;
+
+      background-color: #00000000 !important;
     }
 
     .close {
@@ -319,7 +321,7 @@ html {
     border: 3.3333333333px solid rgb(158, 224, 4);
     border-radius: 50%;
     padding: 0;
-    margin: 0 auto;
+    margin: 12px auto;
     cursor: pointer;
     user-select: none;
 }
@@ -354,6 +356,9 @@ html {
   left: 2vw;
 
   z-index: 1 !important;
+
+  background-color: #000000cc;
+  border-radius: 23px
 }
 
 /*input slider color change*/
@@ -424,6 +429,12 @@ input[type="range"]::-ms-fill-upper {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+
+  position: fixed;
+  bottom: 0;
+  background-color: #0000004d;
+  width: 100%;
+  color: white;
 }
 
 a:link {
@@ -438,4 +449,32 @@ a:visited {
 /* mouse over link */
 a:hover {
   color: rgb(159, 218, 111);
+}
+
+.hovertext {
+  position: relative;
+  border-bottom: 1px dotted black;
+}
+
+.hovertext:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: 140px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  transition: opacity 1s ease-in-out;
+
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+}
+
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
 }
