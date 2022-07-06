@@ -574,8 +574,9 @@ for(let i = 0; i < images.length; i++){
 Swal.fire({
     icon: 'success',
     title: 'Hooray!',
-    text: 'Thank you for visiting. The webpage is still under construction!',
-    //footer: '<a style="text-decoration:none;color:#2678C4;" href="https://github.com/phaedonv" target="_blank">Visit my github account!</a>'
+    text: 'Thank you for visiting. Enjoy the posters!',
+    footer: '<a style="text-decoration:none;color:#2678C4;" href="https://www.instagram.com/alavastron/" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>'
+    //footer: '<a style="text-decoration:none;color:#2678C4;" href="https://www.facebook.com/alavastroncafe/" target="_blank"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>'
   })
 
 //Back to the top button...
