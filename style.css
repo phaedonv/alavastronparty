@@ -1,3 +1,12 @@
+*{
+  text-decoration: none;
+
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
 html {
   background-color: black;
 }
@@ -17,16 +26,71 @@ html {
   color: #d014d6;
   text-align: center;
   text-transform: uppercase;
+
+  z-index: 1;
+  position: sticky;
+}
+
+#logo {
+  font-size: 6vw;
+}
+
+.animetext {
+  animation: flow 2s infinite;
+  background: linear-gradient(to right, #45a3e5, #66bf39, #eb670f, #f35, #864cbf );
+  background-size: 150%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes flow {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.container div {
+  margin: 2vh 0;
+  text-align: center;
+}
+
+#social {
+  display: flex;
 }
 
 #fbtn {
-  background-color: rgb(216, 12, 165);
+  border-radius: 20px;
 }
 
 #info {
   color:#d014d6;
   font-size: large;
-  margin-top: 2vh;
+  margin-top: 0vh;
+}
+
+.github-corner {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  cursor: pointer;
+}
+
+#vcount {
+  color: #d014d6;
+  font-size: medium;
+  text-align: center;
+}
+
+#visitor {
+  font-size: medium;
 }
 
 #album {
@@ -160,12 +224,13 @@ html {
   /* The Close Button */
   .close {
     position: absolute;
-    top: 15px;
-    right: 35px;
+    top: 50px;
+    right: 21vw;
     color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
+    z-index: 12 !important;
   }
   
   .close:hover,
@@ -175,9 +240,241 @@ html {
     cursor: pointer;
   }
   
-  /* 100% Image Width on Smaller Screens */
+  /* Settings for and on Smaller Screens */
   @media only screen and (max-width: 700px){
     .modal-content {
-      width: 100%;
+      width: 94%;
+    }
+
+    #heading {
+      font-size: 4vh;
+      letter-spacing: 6px;
+
+      padding-top: 2rem;
+    }
+
+    #logo {
+      font-size: 3vh;
+      /* padding-top: 2vh; */
+      letter-spacing: 12px;
+    }
+
+    #kit-player-one a, input{
+      display: none;
+    }
+    #kit-player-one {
+      position: sticky !important;
+
+      z-index: 1 !important;
+
+      background-color: #00000000 !important;
+    }
+
+    .close {
+      position: absolute;
+      top: 50px;
+      right: 3vw !important;
+
+      z-index: 12 !important;
     }
   }
+
+  /*back to top button CSS*/
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+
+    font-size: larger;
+  }
+  
+  #myBtn:hover {
+    background-color: #d014d6;
+    color: white;
+  }
+
+
+
+  /*another one play btn ----------------------------with pretty css-----------------------------find old css at https://codepen.io/phaedonv/pen/WNpRarV------------------------------*/
+.center{
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#cont {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    display: block;
+    border: 3.3333333333px solid rgb(158, 224, 4);
+    border-radius: 50%;
+    padding: 0;
+    margin: 12px auto;
+    cursor: pointer;
+    user-select: none;
+}
+
+.box, .play{
+    transform: translate(-5.538462px, -24px);
+    border-top: 25px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 25px solid rgb(201, 46, 111);
+}
+
+.pause {
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  transition: all 0.2s ease;
+  width: 42%;
+  height: 63%;
+  transform: translate(-49%, -34%);
+  top: 25px;
+  border-top: 0 solid transparent;
+  border-right: 8.3333333333px solid rgb(158, 224, 4);
+  border-bottom: 0 solid transparent;
+  border-left: 8.3333333333px solid rgb(158, 224, 4);
+}
+
+/*kit-player-one design*/
+#kit-player-one {
+  position: fixed;
+  top: 2vh;
+  left: 2vw;
+
+  z-index: 1 !important;
+
+  background-color: #000000cc;
+  border-radius: 23px
+}
+
+/*input slider color change*/
+/*Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type='range'] {
+      overflow: hidden;
+      width: 100px;
+      -webkit-appearance: none;
+      background-color: #C92E6F;
+      margin-top: 1vh;
+
+      border-radius: 2vw;
+    }
+
+    input[type='range']::-webkit-slider-runnable-track {
+      height: 10px;
+      -webkit-appearance: none;
+      color: #9EE001;
+      margin-top: -1px;
+    }
+
+    input[type='range']::-webkit-slider-thumb {
+      width: 10px;
+      -webkit-appearance: none;
+      height: 10px;
+      cursor: ew-resize;
+      background: black;
+      box-shadow: -80px 0 0 80px #9EE001;
+    }
+
+}
+/** FF*/
+input[type="range"]::-moz-range-progress {
+  background-color: #9EE001;
+}
+input[type="range"]::-moz-range-track {
+  background-color: #9a905d;
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+  background-color: #9EE001;
+}
+input[type="range"]::-ms-fill-upper {
+  background-color: #9a905d;
+}
+
+/*web-radio info*/
+#info {
+  margin-top: 0.5vh;
+
+  text-align: center;
+}
+
+#info a{
+  font-size: 18px;
+  color: #9FDF03; 
+  letter-spacing: 1px;
+}
+
+#info a:hover {
+  color: #C92E6F;
+}
+  
+#licence {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+  position: fixed;
+  bottom: 0;
+  background-color: #0000004d;
+  width: 100%;
+  color: white;
+}
+
+a:link {
+  color: rgb(252, 250, 250);
+}
+
+/* visited link */
+a:visited {
+  color: rgb(100, 100, 100);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(159, 218, 111);
+}
+
+.hovertext {
+  position: relative;
+  border-bottom: 1px dotted black;
+}
+
+.hovertext:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: 140px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  transition: opacity 1s ease-in-out;
+
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+}
+
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
+}

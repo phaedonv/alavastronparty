@@ -525,7 +525,7 @@ posterData.forEach(function(obj) {
 
     let card = document.createElement("div");
     card.innerHTML = `<img class="lozad" data-src="https://res.cloudinary.com/thisisnotanimage/image/upload/fl_attachment:poster/f_auto,q_auto/${obj.picture}" alt="${obj.id}" id="poster">
-                    <a id="link" href="https://res.cloudinary.com/thisisnotanimage/image/upload/fl_attachment:poster/${obj.picture}">download<br>👇</a>`   
+                    <a id="link" href="https://res.cloudinary.com/thisisnotanimage/image/upload/fl_attachment:poster/${obj.picture}">collect <br> <i class="fa-solid fa-cloud-arrow-down"></i></a>`   
 
     document.getElementById("album").appendChild(card);
     card.id = "poster-div";
@@ -536,6 +536,26 @@ posterData.forEach(function(obj) {
 const observer = lozad(); // lazy loads elements with default selector as '.lozad'
 observer.observe();
 
+// start radio on page load
+document.getElementById('kit').muted = false;
+function autoplay() {
+  document.getElementById('kit').play();
+}
+
+window.onload = autoplay();
+
+window.onload = function() {
+  var reloading = sessionStorage.getItem("reloading");
+  if (reloading) {
+      sessionStorage.removeItem("reloading");
+      autoplay();
+  }
+}
+
+function reloadP() {
+  sessionStorage.setItem("reloading", "true");
+  document.location.reload();
+}
 
 //modaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaal
 // Get the modal
@@ -573,10 +593,10 @@ for(let i = 0; i < images.length; i++){
 
 
 //sweet alert
-
 Swal.fire({
     icon: 'success',
     title: 'Hooray!',
-    text: 'Thank you for visiting. The webpage is still under construction!',
-    //footer: '<a style="text-decoration:none;color:#2678C4;" href="https://github.com/phaedonv" target="_blank">Visit my github account!</a>'
+    text: 'Thank you for visiting. Enjoy the posters!',
+    footer: '<a style="text-decoration:none;color:#2678C4;" href="https://www.instagram.com/alavastron/" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>'
+    //footer: '<a style="text-decoration:none;color:#2678C4;" href="https://www.facebook.com/alavastroncafe/" target="_blank"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>'
   })
