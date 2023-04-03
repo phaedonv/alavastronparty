@@ -477,7 +477,26 @@ posterData = [{
     "picture" : "v1680550109/Alavastron%20posters/11years_alavastron-01-01_vbcig4.png"
 }]
 
+// Randomize posters in the array
+function shuffle(array) {
+    let currentIndex = array.length,  randomIndex;
+  
+    // While there remain elements to shuffle.
+    while (currentIndex != 0) {
+  
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
+  }
 
+shuffle(posterData);
 
 posterData.forEach(function(obj) {
     /*
